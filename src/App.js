@@ -26,7 +26,6 @@ function App() {
       <div className='todo-app-container
                       space-y-3 
                       w-full
-                      min-h-screen
                       mx-auto
                     bg-white 
                       shadow-lg 
