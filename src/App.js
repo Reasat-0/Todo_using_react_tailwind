@@ -20,12 +20,14 @@ function App() {
                     flex 
                     justify-center 
                     items-center 
-                    bg-gradient-to-r from-sky-300 to-sky-100
+                    bg-gradient-to-r from-sky-300 to-violet-300
+
                     min-h-screen
                     ">
       <div className='todo-app-container
                       space-y-3 
                       w-full
+
                       mx-auto
                     bg-white 
                       shadow-lg 

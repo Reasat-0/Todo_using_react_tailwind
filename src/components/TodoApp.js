@@ -40,16 +40,24 @@ const TodoList = () => {
 
 
     const onSubmit = (newTodo) => {
+
+        
+        if(!newTodo.task || /^\s*$/.test(newTodo.task)){
+            return false;
+        }
+
         setTaskList( (prev) => ([
           ...prev,
           newTodo
         ]));
+        setFilterType('')
     }
 
     const onDelete = (id) => {
         setTaskList((prev)=> ([
           ...prev.filter( ( item, idx ) => id !== item.id)
         ]))
+        setFilterType('')
       }
     
     const onUpdate = (id) => {
@@ -57,14 +65,12 @@ const TodoList = () => {
             prev.map( (task) => (
                 task.id === id ? {...task, isCompleted: !task.isCompleted } : task
             ))
-
         ))
+        setFilterType('')
     }
     
     const onFilterChange = (filterVal) => {
         setFilterType(filterVal)
-
-        // setTaskList(taskList)
     }
 
 

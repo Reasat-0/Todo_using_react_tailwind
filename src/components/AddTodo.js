@@ -12,6 +12,7 @@ const AddTodo = (props) => {
     const taskLength = props.tasks.length
     const handleSubmit = (e) => {
         e.preventDefault();
+
         props.onSubmit({
             id: taskLength,
             task: input,
